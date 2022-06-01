@@ -1,13 +1,8 @@
-from django.conf import settings
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from .views import item_list
+
+app_name = 'tech_shop'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('', include('tech_shop.urls', namespace='tech_shop')),
+    path('', item_list, name='item-list')
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]

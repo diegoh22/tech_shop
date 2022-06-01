@@ -1,8 +1,10 @@
-from django.urls import path
-from .views import item_list
-
-app_name = 'tech_shop'
+from django.conf import settings
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path(''. item_list, name='item-list')
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('', include('tech_shop.urls', namespace='tech_shop')),
 ]
+

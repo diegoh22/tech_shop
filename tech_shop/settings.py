@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django.contrib.staticfiles',
     'techshop',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +88,8 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-WSGI_APPLICATION = 'techshop.wsgi.application'
+
+WSGI_APPLICATION = 'tech_shop.wsgi.application'
 
 
 # Database
